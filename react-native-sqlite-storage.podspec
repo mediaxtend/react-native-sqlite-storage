@@ -17,4 +17,5 @@ Pod::Spec.new do |s|
   s.source_files   = "src/ios/*.{h,m}"
   s.dependency 'React'
   s.dependency 'SQLCipher', '3.4.0'
+  s.xcconfig = { 'GCC_PREPROCESSOR_DEFINITIONS' => 'SQLITE_HAS_CODEC=1' }
 end
