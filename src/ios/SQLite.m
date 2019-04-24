@@ -123,6 +123,11 @@ RCT_EXPORT_MODULE();
   return self;
 }
 
++ (BOOL)requiresMainQueueSetup
+{
+  return NO;
+}
+
 - (void)runInBackground:(void (^)())block
 {
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), block);
